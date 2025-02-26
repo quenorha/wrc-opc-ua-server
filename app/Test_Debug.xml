@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Test_Debug</Name>
+  <Description />
+  <MonitoredFileSets>
+    <MonitoredFileSet Name="PlanningSet">
+      <MonitoredFiles>
+        <MonitoredFile UriPath="/_files/_planning" QueryOption="?plage_jt.hs" FileName="C:\Share\PlanningWeb\plage_jt.json" UseHeatShrink="true" />
+        <MonitoredFile UriPath="/_files/_planning" QueryOption="?plage_cal_exc.hs" FileName="C:\Share\PlanningWeb\plage_cal_exc.json" UseHeatShrink="true" />
+        <MonitoredFile UriPath="/_files/_planning" QueryOption="?calendrier.hs" FileName="C:\Share\PlanningWeb\calendrier.json" UseHeatShrink="true" />
+        <MonitoredFile UriPath="/_files/_planning" QueryOption="?semaine_type.hs" FileName="C:\Share\PlanningWeb\semaine_type.json" UseHeatShrink="true" />
+      </MonitoredFiles>
+    </MonitoredFileSet>
+  </MonitoredFileSets>
+  <UriQuerySets>
+    <UriQuerySet Name="DefaultUriQuerySet" Default="true">
+      <UriQueries>
+        <UriQuery UriPath="System/Info" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Network/Wifi" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Enocean/BaseID" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Enocean/Status" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Usages/CVC/Ventilation" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Ressources/PIDs" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Zone/0/Calendrier" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Zone/0/Enocean" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Zone/0/Loc" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Zone/0/Key" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Zone/0/CVC/Profil" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Config/Zone/0/ECL/Profil" QueryOption="hs" UseHeatShrink="true" MinCycle="60000" />
+        <UriQuery UriPath="Temps_Reel/Zone/0" QueryOption="hs" UseHeatShrink="true" MinCycle="10000" />
+      </UriQueries>
+    </UriQuerySet>
+  </UriQuerySets>
+  <MulticastItems>
+    <MulticastItem Name="Saison" CycleInMin="1" ValueName="saison.ID" Default="true" GwIpOnly="true">
+      <Value xsi:type="xsd:int">0</Value>
+      <UriQueries>
+        <UriQuery UriPath="Config/Zone/Calendrier" QueryOption="" UseHeatShrink="false" MinCycle="30000" />
+      </UriQueries>
+    </MulticastItem>
+  </MulticastItems>
+  <Items>
+    <Item Name="GWBUR" CycleInMin="0" Address="10.0.5.43" QueryOption="" MonitoredFileSet="PlanningSet" UriQuerySet="" />
+  </Items>
+</Project>
