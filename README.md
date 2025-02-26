@@ -12,12 +12,7 @@ docker run -d -p 54541:54541 --name wrc-opc-ua-server wrc-opc-ua-server
 
 ### Run with a config file
 
-Create your config file using WRC Project Explorer.
-
-Optionally, download example config file
-```
-curl -k -o /root/project.xml https://raw.githubusercontent.com/quenorha/wrc-opc-ua-server/refs/heads/main/project.xml
-```
+Create your config file using WRC Project Explorer and transfer it to the controller (/root/project.xml)
 
 ```
 docker run -d -p 54541:54541 --name wrc-opc-ua-server -v /root/project.xml:/app/data/project.xml wrc-opc-ua-server
