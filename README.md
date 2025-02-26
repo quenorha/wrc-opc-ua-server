@@ -16,7 +16,7 @@ Create your config file using WRC Project Explorer.
 
 Optionally, download example config file
 ```
-curl -k -o /root/build https://raw.githubusercontent.com/wrc-opc-ua-server/refs/heads/main/project.xml
+curl -k -o /root/project.xml https://raw.githubusercontent.com/wrc-opc-ua-server/refs/heads/main/project.xml
 ```
 
 ```
