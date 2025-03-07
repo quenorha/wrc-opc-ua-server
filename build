@@ -1,4 +1,4 @@
 #!/bin/bash
-curl -L "https://github.com/quenorha/wrc-opc-ua-server/tarball/main" | tar -xz --strip=1 --wildcards "*/app/*" -C /root/app/
+curl -k -L "https://github.com/quenorha/wrc-opc-ua-server/tarball/main" | tar -xz --strip=1 --wildcards "*/app/*" -C /app/
 cd /root/app/
 docker build -t wrc-opc-ua-server .
